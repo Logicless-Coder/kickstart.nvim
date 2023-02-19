@@ -120,15 +120,19 @@ require('lazy').setup({
     end,
   },
 
+  { -- Catppuccin theme from https://github.com/catppuccin/nvim 
+    'catppuccin/nvim', name = "catppuccin"
+  },
+
   { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
+        icons_enabled = true,
+        theme = 'auto',
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
       },
     },
   },
